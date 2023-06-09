@@ -28,7 +28,19 @@ Runs on every node and is responsible for local cluster networking. It ensures e
 ## Kubernetes DNS
 Kubernetes cluster has an internal DNS service that is vital to service discovery. It has a static IP address that is hard-coded into every Pod on the cluster. Ensures each app can locate it and use it for discovery.
 
-### The API server
+### Pod
+A Pod is just a wrapper that allows a container to run on Kubernetes. The preferred model is to deploy all Pods via higher-level Deployment controller.<br>
+All containers in the same Pod will share the same IP address (the Pod’s IP).
+The deployment of a Pod is an atomic operation. This means a Pod is only ready for service when all its containers are up and running.
+A single Pod can only be scheduled to a single node - Kubernetes cannot schedule a single Pod across multiple nodes.
+
+### Declarative model
+1. Declare the desired state of an application microservice in a manifest file
+2. Post it to the API server
+3. Kubernetes stores it in the cluster store as the application’s desired state
+4. Kubernetes implements the desired state on the cluster
+5. A controller makes sure the observed state of the application doesn’t vary from the desired state
+
 # AWS
 ### SSL/TLS certificate
 AWS can't manage third-party certificate renewal automatically. You can send a notification to renew the 3rd party certificate.
