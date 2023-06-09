@@ -32,6 +32,9 @@ Kubernetes cluster has an internal DNS service that is vital to service discover
 # AWS
 ### SSL/TLS certificate
 AWS can't manage third-party certificate renewal automatically. You can send a notification to renew the 3rd party certificate.
+### AWS Textract
+Amazon Textract 是一項符合 HIPAA 各項規定的服務。HIPAA 資格適用於提供 Amazon Textract 的所有 AWS 區域。這表示您可以使用 Amazon Textract 協助處理從影像中提取的受保護醫療資訊 (PHI)，為您的醫療保健應用程式提供技術支援。
 
 #### reference
-**Nigel Poulton - The Kubernetes Book, 2023 Edition**
+**Nigel Poulton - The Kubernetes Book, 2023 Edition** <br>
+https://aws.amazon.com/tw/about-aws/whats-new/2019/10/amazon-textract-is-now-a-hipaa-eligible-service/
