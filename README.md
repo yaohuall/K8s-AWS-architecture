@@ -56,6 +56,11 @@ To list service accounts:
 
     kubectl get serviceaccounts
 
+### API token for service account
+You can get a time-limited API token for that ServiceAccount using kubectl:
+
+    kubectl create token build-robot
+The output from that command is a token that you can use to authenticate as that ServiceAccount.
 # AWS
 ### SSL/TLS certificate
 AWS can't manage third-party certificate renewal automatically. You can send a notification to renew the 3rd party certificate.
@@ -64,4 +69,5 @@ Amazon Textract 是一項符合 HIPAA 各項規定的服務。HIPAA 資格適用
 
 #### reference
 **Nigel Poulton - The Kubernetes Book, 2023 Edition** <br>
-https://aws.amazon.com/tw/about-aws/whats-new/2019/10/amazon-textract-is-now-a-hipaa-eligible-service/
+https://aws.amazon.com/tw/about-aws/whats-new/2019/10/amazon-textract-is-now-a-hipaa-eligible-service/ <br>
+https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
