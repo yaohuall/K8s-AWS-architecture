@@ -41,6 +41,21 @@ A single Pod can only be scheduled to a single node - Kubernetes cannot schedule
 4. Kubernetes implements the desired state on the cluster
 5. A controller makes sure the observed state of the application doesn’t vary from the desired state
 
+## Service account
+When Pods contact the API server, Pods authenticate as a particular ServiceAccount (for example, default). There is always at least one ServiceAccount in each namespace.
+
+Every Kubernetes namespace contains at least one ServiceAccount: the default ServiceAccount for that namespace, named default. If you do not specify a ServiceAccount when you create a Pod, Kubernetes automatically assigns the ServiceAccount named default in that namespace.
+
+You can fetch the details for a Pod you have created. For example:
+
+    kubectl get pods/<podname> -o yaml
+    
+In the output, you see a field spec.serviceAccountName.
+
+To list service accounts:
+
+    kubectl get serviceaccounts
+
 # AWS
 ### SSL/TLS certificate
 AWS can't manage third-party certificate renewal automatically. You can send a notification to renew the 3rd party certificate.
