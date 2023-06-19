@@ -66,7 +66,9 @@ The output from that command is a token that you can use to authenticate as that
 AWS can't manage third-party certificate renewal automatically. You can send a notification to renew the 3rd party certificate.
 ### AWS Textract
 Amazon Textract 是一項符合 HIPAA 各項規定的服務。HIPAA 資格適用於提供 Amazon Textract 的所有 AWS 區域。這表示您可以使用 Amazon Textract 協助處理從影像中提取的受保護醫療資訊 (PHI)，為您的醫療保健應用程式提供技術支援。
-
+### SQS
+#### Visibility timeout
+During this time, the consumer processes and deletes the message. However, if the consumer fails before the message and system doesn't call the **DeleteMessage** action forthat message before the visibility timeout expires, the message becomes visible to other consumers and the message is received again.
 #### reference
 **Nigel Poulton - The Kubernetes Book, 2023 Edition** <br>
 https://aws.amazon.com/tw/about-aws/whats-new/2019/10/amazon-textract-is-now-a-hipaa-eligible-service/ <br>
