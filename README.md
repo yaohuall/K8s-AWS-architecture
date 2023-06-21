@@ -76,7 +76,7 @@ Reduce the stress on db res(CPU, RAM) & failover time
 1. Restoring a RDS/Aurora backup or a snapshot creates a new database
 2. Restoring MySQL RDS database from S3
 3. Restoring MySQL Aurora cluster from S3
-   
+4. Aurora database cloning: faster than snapshot & restore, the new db cluster uses the same cluster volume and data as the original but will change when data updates are made, fast & cost-effective
 #### reference
 **Nigel Poulton - The Kubernetes Book, 2023 Edition** <br>
 https://aws.amazon.com/tw/about-aws/whats-new/2019/10/amazon-textract-is-now-a-hipaa-eligible-service/ <br>
