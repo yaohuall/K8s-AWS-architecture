@@ -79,6 +79,8 @@ Reduce the stress on db res(CPU, RAM) & failover time
 4. Aurora database cloning: faster than snapshot & restore, the new db cluster uses the same cluster volume and data as the original but will change when data updates are made, fast & cost-effective
 ### DynamoDB
 Point-in-time recovery: continuous backups, can restore that table to any point in time during the last 35 days. DynamoDB maintains incremental backups of your table.
+### S3
+With a gateway endpoint, you can access Amazon S3 from your VPC, without requiring an internet gateway or NAT device for your VPC, and **with no additional cost**. However, **gateway endpoints do not allow access from on-premises networks, from peered VPCs in other AWS Regions, or through a transit gateway. For those scenarios, you must use an interface endpoint, which is available for an additional cost**.
 #### reference
 **Nigel Poulton - The Kubernetes Book, 2023 Edition** <br>
 https://aws.amazon.com/tw/about-aws/whats-new/2019/10/amazon-textract-is-now-a-hipaa-eligible-service/ <br>
