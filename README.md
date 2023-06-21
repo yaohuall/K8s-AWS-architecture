@@ -77,6 +77,8 @@ Reduce the stress on db res(CPU, RAM) & failover time
 2. Restoring MySQL RDS database from S3
 3. Restoring MySQL Aurora cluster from S3
 4. Aurora database cloning: faster than snapshot & restore, the new db cluster uses the same cluster volume and data as the original but will change when data updates are made, fast & cost-effective
+### DynamoDB
+Point-in-time recovery: continuous backups, can restore that table to any point in time during the last 35 days. DynamoDB maintains incremental backups of your table.
 #### reference
 **Nigel Poulton - The Kubernetes Book, 2023 Edition** <br>
 https://aws.amazon.com/tw/about-aws/whats-new/2019/10/amazon-textract-is-now-a-hipaa-eligible-service/ <br>
