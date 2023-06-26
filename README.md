@@ -63,7 +63,9 @@ You can get a time-limited API token for that ServiceAccount using kubectl:
 The output from that command is a token that you can use to authenticate as that ServiceAccount.
 # AWS
 ### SSL/TLS certificate
-AWS can't manage third-party certificate renewal automatically. You can send a notification to renew the 3rd party certificate.
+AWS can't manage third-party certificate renewal automatically. You can send a notification to renew the 3rd party certificate. 
+
+**AWS Config** has a managed rule named acm-certificate-expiration-check to check for expiring certs.
 ### AWS Textract
 Amazon Textract 是一項符合 HIPAA 各項規定的服務。HIPAA 資格適用於提供 Amazon Textract 的所有 AWS 區域。這表示您可以使用 Amazon Textract 協助處理從影像中提取的受保護醫療資訊 (PHI)，為您的醫療保健應用程式提供技術支援。
 ### SQS
