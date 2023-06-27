@@ -74,14 +74,16 @@ Amazon Textract 是一項符合 HIPAA 各項規定的服務。HIPAA 資格適用
 
 #### Visibility timeout
 During this time, the consumer processes and deletes the message. However, if the consumer fails before the message and system doesn't call the **DeleteMessage** action forthat message before the visibility timeout expires, the message becomes visible to other consumers and the message is received again.
-### RDS Proxy
+### RDS
+#### RDS Proxy
 Serverless, autoscaling, high availability <br>
 Reduce the stress on db res(CPU, RAM) & failover time
 ### cloud & on-premise db restore options
 1. Restoring a RDS/Aurora backup or a snapshot creates a new database
 2. Restoring MySQL RDS database from S3
 3. Restoring MySQL Aurora cluster from S3
-4. Aurora database cloning: faster than snapshot & restore, the new db cluster uses the same cluster volume and data as the original but will change when data updates are made, fast & cost-effective
+4. Aurora database cloning: faster than snapshot & restore, the new db cluster uses the same cluster volume and data as the original but will change when data updates are made, fast & cost-effective. **Useful to create a staging database from a prod db without impacting the production db.
+   
 ### DynamoDB
 Point-in-time recovery: continuous backups, can restore that table to any point in time during the last 35 days. DynamoDB maintains incremental backups of your table.
 ### S3
