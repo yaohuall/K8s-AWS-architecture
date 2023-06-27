@@ -87,7 +87,7 @@ Point-in-time recovery: continuous backups, can restore that table to any point 
 ### S3
 With a gateway endpoint, you can access Amazon S3 from your VPC, without requiring an internet gateway or NAT device for your VPC, and **with no additional cost**. However, **gateway endpoints do not allow access from on-premises networks, from peered VPCs in other AWS Regions, or through a transit gateway. For those scenarios, you must use an interface endpoint, which is available for an additional cost**.
 #### Non-IAM access
-Create a VPC endpoint for S3 and add a bucket policy that allows access from the VPC endpoint.
+Create a VPC endpoint for S3 and add a bucket policy that allows access from the VPC endpoint. **VPC gateway endpoint** supports **S3 and DynamoDB** and is free.
 
 #### Requester Pays
 Share data but not incur charges associated with others accessing the data.
