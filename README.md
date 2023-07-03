@@ -90,7 +90,8 @@ Point-in-time recovery: continuous backups, can restore that table to any point 
 With a gateway endpoint, you can access Amazon S3 from your VPC, without requiring an internet gateway or NAT device for your VPC, and **with no additional cost**. However, **gateway endpoints do not allow access from on-premises networks, from peered VPCs in other AWS Regions, or through a transit gateway. For those scenarios, you must use an interface endpoint, which is available for an additional cost**.
 #### Non-IAM access
 Create a VPC endpoint for S3 and add a bucket policy that allows access from the VPC endpoint. **VPC gateway endpoint** supports **S3 and DynamoDB** and is free.
-
+#### Legal hold
+The Object Lock legal hold operation enables you to place a legal hold on an object version. Like setting a retention period, a legal hold prevents an object version from being overwritten or deleted. However, a legal hold doesn't have an associated retention period and remains in effect until removed.
 #### Requester Pays
 Share data but not incur charges associated with others accessing the data.
 #### Prevent accidental delete
