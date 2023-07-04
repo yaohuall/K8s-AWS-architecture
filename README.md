@@ -97,6 +97,9 @@ Share data but not incur charges associated with others accessing the data.
 #### Prevent accidental delete
 **MFA delete** force users to generate a code on a device before doing important operations(eg., permanently deleting) on S3.
 
+### Snowball family
+**snowcone**: 14TB storage
+
 #### reference
 **Nigel Poulton - The Kubernetes Book, 2023 Edition** <br>
 https://aws.amazon.com/tw/about-aws/whats-new/2019/10/amazon-textract-is-now-a-hipaa-eligible-service/ <br>
