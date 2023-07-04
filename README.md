@@ -100,6 +100,8 @@ Share data but not incur charges associated with others accessing the data.
 ### Snowball family
 **snowcone**: 14TB storage
 
+### Cloudwatch
+You can configure a **CloudWatch Logs** log group to stream data it receives to your AWS OpenSearch Service cluster in near real-time through a **CloudWatch Logs subscription**.
 #### reference
 **Nigel Poulton - The Kubernetes Book, 2023 Edition** <br>
 https://aws.amazon.com/tw/about-aws/whats-new/2019/10/amazon-textract-is-now-a-hipaa-eligible-service/ <br>
