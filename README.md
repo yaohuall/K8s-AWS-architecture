@@ -102,6 +102,27 @@ Share data but not incur charges associated with others accessing the data.
 
 ### Cloudwatch
 You can configure a **CloudWatch Logs** log group to stream data it receives to your AWS OpenSearch Service cluster in near real-time through a **CloudWatch Logs subscription**.
+
+### AWS Global Accelerator vs CloudFront
+Both use the AWS global network and its edge locations around the world. <br>
+Both services integrate with AWS Shield for DDoS protection.
+
+#### CloudFront
+Improves performance for both cacheable content(imgs, videos) <br>
+Content is served at the edge.<br>
+Dynamic content(API acceleration and dynamic site delivery) <br>
+
+#### Global Accelerator
+Improves performance for apps over TCP or UDP <br>
+Proxying packets at the edge to apps running in more AWS Regions. <br>
+Good for non-HTTP use cases, such as gaming(UDP), IoT(MQTT). Good for HTTP use cases require static IP, fast regional failover
+
+
+
+
+
+
+
 #### reference
 **Nigel Poulton - The Kubernetes Book, 2023 Edition** <br>
 https://aws.amazon.com/tw/about-aws/whats-new/2019/10/amazon-textract-is-now-a-hipaa-eligible-service/ <br>
