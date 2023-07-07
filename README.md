@@ -78,12 +78,15 @@ During this time, the consumer processes and deletes the message. However, if th
 #### RDS Proxy
 Serverless, autoscaling, high availability <br>
 Reduce the stress on db res(CPU, RAM) & failover time
-### cloud & on-premise db restore options
+#### cloud & on-premise db restore options
 1. Restoring a RDS/Aurora backup or a snapshot creates a new database
 2. Restoring MySQL RDS database from S3
 3. Restoring MySQL Aurora cluster from S3
 4. Aurora database cloning: faster than snapshot & restore, the new db cluster uses the same cluster volume and data as the original but will change when data updates are made, fast & cost-effective. **Useful to create a staging database from a prod db without impacting the production db.
-   
+#### DB security
+1. DB master & replicas encryption using AWS KMS - must be defined as lauch time. <br>
+2. If the master is not encrypted, the read replicas cannot be encrypted. <br>
+3. To encrypt an un-encrypted db, use DB snapshot & restore as encrypted.
 ### DynamoDB
 Point-in-time recovery: continuous backups, can restore that table to any point in time during the last 35 days. DynamoDB maintains incremental backups of your table.
 ### S3
