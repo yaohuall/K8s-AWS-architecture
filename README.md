@@ -99,7 +99,11 @@ The Object Lock legal hold operation enables you to place a legal hold on an obj
 Share data but not incur charges associated with others accessing the data.
 #### Prevent accidental delete
 **MFA delete** force users to generate a code on a device before doing important operations(eg., permanently deleting) on S3.
-
+#### S3 Event Notificaitons with Amazon EventBridge
+1. Advanced filtering
+2. Multiple destinations
+3. EventBridge Capabilities
+   
 ### Snowball family
 **snowcone**: 14TB storage
 
