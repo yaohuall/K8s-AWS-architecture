@@ -78,6 +78,15 @@ Amazon Textract 是一項符合 HIPAA 各項規定的服務。HIPAA 資格適用
 #### SQS with ASG
 ![image](https://github.com/yaohuall/K8s-AWS-playground/assets/109536074/b50567fa-1cf3-4d7e-833a-9cde4971bf8e)
 
+### SQS vs SNS vs Kinesis
+| Feature | SQS                                   | SNS                                       | Kinesis                                                                |
+|---------|---------------------------------------|-------------------------------------------|------------------------------------------------------------------------|
+|         | Consumer pull data                    | Push data to many subscribers             | Standard: pull data from Kinesis Push data, 2mb per shard per consumer |
+|         | Data is deleted after being consumed  | Up to 12500000 subscribers, 100000 topics | Can replay data                                                        |
+|         | Can have as many as consumers as want | Data lost if not delivered                | real-time big tat, analytics and ETL                                   |
+|         | No need to provision throughput       | No need to provision throughput           | Data expires after X days                                              |
+|         | Can FIFO                              | SNS FIFO with SQS FIFO                    | Ordering at the shard level                                            |
+|         | Individual message delay capability   | Integrates with SQS for fan-out arch      | Provisioned mode or on-demand capacity mode                            |
 #### Visibility timeout
 During this time, the consumer processes and deletes the message. However, if the consumer fails before the message and system doesn't call the **DeleteMessage** action forthat message before the visibility timeout expires, the message becomes visible to other consumers and the message is received again.
 ### RDS
