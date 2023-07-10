@@ -145,7 +145,8 @@ Improves performance for apps over TCP or UDP <br>
 Proxying packets at the edge to apps running in more AWS Regions. <br>
 Good for non-HTTP use cases, such as gaming(UDP), IoT(MQTT). Good for HTTP use cases require static IP, fast regional failover
 
-
+### Service control policy
+AWS control tower guardrails & AWS organizations SCPS.
 
 
 
@@ -153,5 +154,7 @@ Good for non-HTTP use cases, such as gaming(UDP), IoT(MQTT). Good for HTTP use c
 
 #### reference
 **Nigel Poulton - The Kubernetes Book, 2023 Edition** <br>
+https://aws.amazon.com <br>
+https://aws.amazon.com/tw/blogs/database/schedule-amazon-rds-stop-and-start-using-aws-lambda/ <br>
 https://aws.amazon.com/tw/about-aws/whats-new/2019/10/amazon-textract-is-now-a-hipaa-eligible-service/ <br>
 https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
