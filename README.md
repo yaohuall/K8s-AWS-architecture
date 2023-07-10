@@ -148,7 +148,9 @@ Good for non-HTTP use cases, such as gaming(UDP), IoT(MQTT). Good for HTTP use c
 ### Service control policy
 AWS control tower guardrails & AWS organizations SCPS.
 
-
+### AWS Direct Connection
+Lead times are often longer than 1 month to establish a new connection. <br>
+Real-time data transfering.
 
 
 
