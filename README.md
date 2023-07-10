@@ -61,6 +61,12 @@ You can get a time-limited API token for that ServiceAccount using kubectl:
 
     kubectl create token build-robot
 The output from that command is a token that you can use to authenticate as that ServiceAccount.
+
+### Namespaces
+**Namespaces** partition a Kubernetes cluster and are designed as an easy way to apply quotas and policies to groups of objects. They’re not designed for strong workload isolation.
+
+Each Namespace can have its own users and RBAC rules, as well as resource quotas.
+
 # AWS
 ### SSL/TLS certificate
 AWS can't manage third-party certificate renewal automatically. You can send a notification to renew the 3rd party certificate. 
