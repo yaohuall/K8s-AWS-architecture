@@ -102,6 +102,10 @@ Reduce the stress on db res(CPU, RAM) & failover time
 1. DB master & replicas encryption using AWS KMS - must be defined as lauch time. <br>
 2. If the master is not encrypted, the read replicas cannot be encrypted. <br>
 3. To encrypt an un-encrypted db, use DB snapshot & restore as encrypted.
+
+#### Scheduling start and stop of RDS
+![image](https://github.com/yaohuall/K8s-AWS-playground/assets/109536074/6b4ce992-2648-4720-9951-05f11f3808d1)
+
 ### DynamoDB
 Point-in-time recovery: continuous backups, can restore that table to any point in time during the last 35 days. DynamoDB maintains incremental backups of your table.
 ### S3
@@ -109,7 +113,9 @@ With a gateway endpoint, you can access Amazon S3 from your VPC, without requiri
 #### Non-IAM access
 Create a VPC endpoint for S3 and add a bucket policy that allows access from the VPC endpoint. **VPC gateway endpoint** supports **S3 and DynamoDB** and is free.
 #### Legal hold
-The Object Lock legal hold operation enables you to place a legal hold on an object version. Like setting a retention period, a legal hold prevents an object version from being overwritten or deleted. However, a legal hold doesn't have an associated retention period and remains in effect until removed.
+The Object Lock governance mode: legal hold operation enables you to place a legal hold on an object version. Like setting a retention period, a legal hold prevents an object version from being overwritten or deleted. However, a legal hold doesn't have an associated retention period and remains in effect until removed.
+
+Object Lock compliance mode: no users include **AWS root account** can modify objects.
 #### Requester Pays
 Share data but not incur charges associated with others accessing the data.
 #### Prevent accidental delete
