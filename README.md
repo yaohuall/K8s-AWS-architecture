@@ -67,6 +67,9 @@ The output from that command is a token that you can use to authenticate as that
 
 Each Namespace can have its own users and RBAC rules, as well as resource quotas.
 
+### Service
+#### EndpointSlice objects
+These hold the list of Pods that match the Service’s label selector and are dynamically updated as matching Pods come and go.
 # AWS
 ### SSL/TLS certificate
 AWS can't manage third-party certificate renewal automatically. You can send a notification to renew the 3rd party certificate. 
