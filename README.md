@@ -75,7 +75,12 @@ These hold the list of Pods that match the Service’s label selector and are dy
 Kubernetes uses storage from a wide range of 3rd-party systems including cloud storage and dedicated storage hardware devices, each provider (a.k.a provisioner) needs a CSI plugin to expose their storage assets to Kubernetes. The plugin usually runs as a set of Pods in the kube-system Namespace. Sometimes we call plugins “provisioners”.
 ### Persistent Volumes (PV) & Persistent Volume Claims (PVC) & Storage Classes (SC)
 **PVs** are how external storage assets are represented in Kubernetes. **PVCs** are like tickets that grant a Pod access to a PV. **SCs** make it all dynamic.
-
+#### Workflow of deploying a SC
+1. Have a storage back-end (can be cloud or on premises)
+2. Have a Kubernetes cluster connected to the back-end storage
+3. Install and configure the CSI storage plugin
+4. Create one or more StorageClasses on Kubernetes
+5. Deploy Pods with PVCs that reference those StorageClasses
 ### Kubernetes service account and authorization in AWS EKS
 ![image](https://github.com/yaohuall/K8s-AWS-playground/assets/109536074/cd563279-df0e-49d8-8a71-d3c808de8f21)
 
