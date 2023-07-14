@@ -85,6 +85,13 @@ Kubernetes uses storage from a wide range of 3rd-party systems including cloud s
 ![image](https://github.com/yaohuall/K8s-AWS-playground/assets/109536074/cd563279-df0e-49d8-8a71-d3c808de8f21)
 
 # AWS
+### EC2 types
+| Feature | On-Demand                                          | Reserved Instances          | Saving plans                                                      | Spot                                         | Dedicated hosts                                            | Dedicated Instances                         |   |
+|---------|----------------------------------------------------|-----------------------------|-------------------------------------------------------------------|----------------------------------------------|------------------------------------------------------------|---------------------------------------------|---|
+|         | Short workload, predictable pricing, pay by second | 1 & 3 years, long workloads | 1 & 3 years, commitment to an amount of usage, long workload      | short workloads, cheap, could lose instances | book an entire physical serverm control instance placement | No other customers will share your hardware |   |
+| Price   | Highest, no upfront, no long-term commitment       | high discount               | Usage beyong EC2 Saving plans is billed at the On-Demand price    | Most cost-efficient                          | Most expensive                                             |                                             |   |
+|         |                                                    |                             | Locked to a specific instance family & AWS region                 |                                              |                                                            |                                             |   |
+|         |                                                    |                             | Pay a certain amount per hour for certain period and any EC2 type |                                              |                                                            |                                             |   |
 ### SSL/TLS certificate
 AWS can't manage third-party certificate renewal automatically. You can send a notification to renew the 3rd party certificate. 
 
@@ -106,6 +113,14 @@ Amazon Textract 是一項符合 HIPAA 各項規定的服務。HIPAA 資格適用
 |         | Individual message delay capability   | Integrates with SQS for fan-out arch      | Provisioned mode or on-demand capacity mode                            |
 #### Visibility timeout
 During this time, the consumer processes and deletes the message. However, if the consumer fails before the message and system doesn't call the **DeleteMessage** action forthat message before the visibility timeout expires, the message becomes visible to other consumers and the message is received again.
+
+### AWS Load Balancer
+| Feature | ALB                                                   | NLB                                             |
+|---------|-------------------------------------------------------|-------------------------------------------------|
+|         | HTTP & HTTPS & WebSocket                              | TCP & UDP                                       |
+|         | Support redirects & routing to different target group | One static IP per AZ, also EIP                  |
+|         |                                                       | Support TCP, HTTP, HTTPS protocol health checks |
+|         | Great fit for micro-services & docker & ECS           | Good performance for TCP & UDP                  |
 ### RDS
 #### RDS Proxy
 Serverless, autoscaling, high availability <br>
