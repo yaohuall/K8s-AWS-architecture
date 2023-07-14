@@ -70,6 +70,15 @@ Each Namespace can have its own users and RBAC rules, as well as resource quotas
 ### Service
 #### EndpointSlice objects
 These hold the list of Pods that match the Service’s label selector and are dynamically updated as matching Pods come and go.
+
+### The Container Storage Interface (CSI)
+Kubernetes uses storage from a wide range of 3rd-party systems including cloud storage and dedicated storage hardware devices, each provider (a.k.a provisioner) needs a CSI plugin to expose their storage assets to Kubernetes. The plugin usually runs as a set of Pods in the kube-system Namespace. Sometimes we call plugins “provisioners”.
+### Persistent Volumes (PV) & Persistent Volume Claims (PVC) & Storage Classes (SC)
+**PVs** are how external storage assets are represented in Kubernetes. **PVCs** are like tickets that grant a Pod access to a PV. **SCs** make it all dynamic.
+
+### Kubernetes service account and authorization in AWS EKS
+![image](https://github.com/yaohuall/K8s-AWS-playground/assets/109536074/cd563279-df0e-49d8-8a71-d3c808de8f21)
+
 # AWS
 ### SSL/TLS certificate
 AWS can't manage third-party certificate renewal automatically. You can send a notification to renew the 3rd party certificate. 
@@ -162,4 +171,5 @@ Real-time data transfering.
 https://aws.amazon.com <br>
 https://aws.amazon.com/tw/blogs/database/schedule-amazon-rds-stop-and-start-using-aws-lambda/ <br>
 https://aws.amazon.com/tw/about-aws/whats-new/2019/10/amazon-textract-is-now-a-hipaa-eligible-service/ <br>
-https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
+https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/ <br>
+https://blog.lightspin.io/exploiting-eks-authentication-vulnerability-in-aws-iam-authenticator
