@@ -124,6 +124,8 @@ Reduce the stress on db res(CPU, RAM) & failover time
 ![image](https://github.com/yaohuall/K8s-AWS-playground/assets/109536074/6b4ce992-2648-4720-9951-05f11f3808d1)
 
 ### DynamoDB
+- Provision mode: manually set IOPS
+- On-demand mode: auto-scaling
 Point-in-time recovery: continuous backups, can restore that table to any point in time during the last 35 days. DynamoDB maintains incremental backups of your table.
 ### S3
 With a gateway endpoint, you can access Amazon S3 from your VPC, without requiring an internet gateway or NAT device for your VPC, and **with no additional cost**. However, **gateway endpoints do not allow access from on-premises networks, from peered VPCs in other AWS Regions, or through a transit gateway. For those scenarios, you must use an interface endpoint, which is available for an additional cost**.
